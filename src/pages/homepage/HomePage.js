@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./HomePage.css";
 import "../../components/InputComponents/FormularioCadastro.css"
 import FormularioCadastro from "../../components/InputComponents/FormularioCadastro";
-class App extends Component {
+class HomePage extends Component {
   render() {
     return (
       <div>
@@ -25,4 +25,4 @@ function validarCPF(cpf){
   }
 }
 
-export default App;
+export default HomePage;

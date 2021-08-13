@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./FormularioCadastro.css"
+import "./FormularioCadastro.css";
 
-function FormularioCadastro({aoEnviar}) {
+function FormularioCadastro({ aoEnviar }) {
   const [email, setEmail] = useState("");
   const [emailC, setEmailc] = useState("");
   const [nome, setNome] = useState("");
@@ -11,19 +11,21 @@ function FormularioCadastro({aoEnviar}) {
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        aoEnviar({nome, sobrenome, cpf, email, emailC});
+        aoEnviar({ nome, sobrenome, cpf, email, emailC });
       }}
     >
       <label>E-mail</label>
       <input
+        className="input-padrao"
         value={email}
         onChange={(event) => {
           setEmail(event.target.value);
         }}
         id="email"
       />
-      <label >Confirme seu e-mail</label>
+      <label>Confirme seu e-mail</label>
       <input
+        className="input-padrao"
         value={emailC}
         onChange={(event) => {
           setEmailc(event.target.value);
@@ -32,12 +34,12 @@ function FormularioCadastro({aoEnviar}) {
       />
       <label>Nome</label>
       <input
+        className="input-padrao"
         value={nome}
         onChange={(event) => {
           setNome(event.target.value);
         }}
         id="nome"
-        
       />
       <label>Sobrenome</label>
       <input
@@ -50,15 +52,14 @@ function FormularioCadastro({aoEnviar}) {
       />
       <label>cpf</label>
       <input
+        className="input-padrao"
         value={cpf}
         onChange={(event) => {
           setCpf(event.target.value);
         }}
         id="CPF"
       />
-      <button type="submit">
-        Cadastrar
-      </button>
+      <button type="submit">Cadastrar</button>
     </form>
   );
 }
