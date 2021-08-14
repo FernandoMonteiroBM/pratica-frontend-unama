@@ -6,7 +6,6 @@ class HomePage extends Component {
   render() {
     return (
       <div>
-        <h1>Formulário de cadastro</h1>
         <FormularioCadastro aoEnviar={aoEnviarForm} validarCPF={validarCPF} />
       </div>
     );
