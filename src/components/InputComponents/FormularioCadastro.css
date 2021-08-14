@@ -1,13 +1,15 @@
-.formulario{
-    margin-left: 150px;
-    margin-right: 250px;
-    margin-top: 100px;
+.formulario {
+  margin-left: 150px;
+  margin-right: 250px;
+  margin-top: 100px;
+  color: white;
 }
 .input-padrao {
   display: block;
   margin: 0 50px 0 50px;
   padding: 10px 0;
   width: 25%;
+  transition: 1s all;
 }
 
 .input-padrao-texto {
@@ -22,4 +24,15 @@
   padding: 10px 0;
   width: 25%;
   border-radius: 10px;
+  transition: 1s all;
+  color: white;
+  background-color: rgb(94, 0, 182);
+  border: none;
+}
+.input-padrao-botao:hover {
+  background: rgb(140, 0, 255);
+  transform: scale(1.1);
+}
+.input-padrao:hover {
+  transform: scale(1.1);
 }
