@@ -12,6 +12,7 @@ function FormularioCadastro({ aoEnviar }) {
   const [genero, setGenero] = useState("");
   const [nascimento, setNascimento] = useState("");
   const [tipo, setTipo] = useState("");
+  const [telefone, setTelefone] = useState("");
   return (
     <div>
       <form
@@ -26,6 +27,7 @@ function FormularioCadastro({ aoEnviar }) {
             genero,
             nascimento,
             tipo,
+            telefone,
           });
         }}
       >
@@ -33,7 +35,7 @@ function FormularioCadastro({ aoEnviar }) {
           <h1 className="input-padrao-texto">Formulário de cadastro</h1>
           <CampoInput
             id="email"
-            textLabel="Confirme seu Email *"
+            textLabel="Email *"
             name="email"
             onChange={(event) => {
               setEmail(event.target.value);
@@ -136,14 +138,40 @@ function FormularioCadastro({ aoEnviar }) {
               <option value="fixo">Fixo</option>
             </select>
           </div>
-          <div></div>
+          <div>
+            <CampoInput
+              id="telefone"
+              textLabel="Telefone *"
+              name="telefone"
+              onChange={(event) => {
+                setTelefone(event.target.value);
+              }}
+              value={telefone}
+              type="text"
+              mask={tipo==="celular" ? "(99)99999-9999" : "(99)9999-9999"}
+              placeholder="(__)_____-____"
+            />
+          </div>
         </div>
+
         <div>
           <button type="submit" className="submit-padrao-botao">
             Cadastrar
           </button>
         </div>
       </form>
+      <div className="resultados">
+        <p>Email: </p>
+        <span>{email}</span>
+        <p>Nome: </p>
+        <span>{nome + " " + sobrenome}</span>
+        <p>{tipo} :</p>
+        <span>{telefone}</span>
+        <p>Data de Nascimento :</p>
+        <span>{nascimento}</span>
+        <p>Genero :</p>
+        <span>{genero}</span>
+      </div>
     </div>
   );
 }

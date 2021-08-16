@@ -68,3 +68,13 @@
   margin-top: 100px;
   color: white;
 }
+.resultados{
+  margin-left: 750px;
+  margin-right: 150px;
+  margin-bottom: 750px;
+  padding: 10px 10px 10px 10px;
+  align-content: center;
+  color: rgb(94, 0, 182);
+  background-color: white;
+  border-radius: 20px;
+}
