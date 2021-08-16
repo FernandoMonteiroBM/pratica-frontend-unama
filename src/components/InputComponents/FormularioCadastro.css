@@ -4,11 +4,19 @@
   margin-top: 100px;
   color: white;
 }
+.formulario-nascimento{
+  margin-left: 150px;
+  margin-right: 250px;
+  
+  color: white;
+}
 .input-padrao {
   display: block;
   margin: 0 50px 0 50px;
   padding: 10px 0;
   width: 25%;
+  border-radius: 20px;
+  border: none;
   transition: 1s all;
 }
 
@@ -17,10 +25,13 @@
   margin: 0 50px 0 50px;
   padding: 10px 0;
   width: 50%;
+  color: white;
 }
-.input-padrao-botao {
+.submit-padrao-botao {
   display: block;
-  margin: 20px 50px 0px 50px;
+  margin-left: 150px;
+  margin-right: 250px;
+  margin-top: 50px;
   padding: 10px 0;
   width: 25%;
   border-radius: 10px;
@@ -35,4 +46,12 @@
 }
 .input-padrao:hover {
   transform: scale(1.1);
+}
+.formulario-botao{
+  margin-left: 150px;
+  margin-right: 250px;
+  margin-top: 10px;
+  color: white;
+  padding-left: 50px;
+  padding-top: 10px;
 }

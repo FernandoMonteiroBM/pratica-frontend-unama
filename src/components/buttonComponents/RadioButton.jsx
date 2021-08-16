@@ -1,12 +1,14 @@
-import React from 'react';
 import "./RadioButton.css"
-function RadioButton() {
+import React from 'react';
+
+function RadioButton({text, ...others}) {
     return (
-        <div className="radio">
-            <p>Selecione seu sexo:</p>
-            <p >Masculino<input type="radio" name="sex"  /></p>
-            <p >Feminino<input type="radio" name="sex" /></p>
-        </div>
+        <p>
+            <input
+                type="radio"
+                {...others}
+            />{text}
+        </p>
     );
 }
 
