@@ -4,10 +4,10 @@
   margin-top: 100px;
   color: white;
 }
-.formulario-nascimento{
+.formulario-nascimento {
   margin-left: 150px;
   margin-right: 250px;
-  
+
   color: white;
 }
 .input-padrao {
@@ -40,18 +40,31 @@
   background-color: rgb(94, 0, 182);
   border: none;
 }
-.input-padrao-botao:hover {
+.submit-padrao-botao:hover {
   background: rgb(140, 0, 255);
   transform: scale(1.1);
 }
 .input-padrao:hover {
   transform: scale(1.1);
 }
-.formulario-botao{
+.formulario-botao {
   margin-left: 150px;
   margin-right: 250px;
   margin-top: 10px;
   color: white;
   padding-left: 50px;
   padding-top: 10px;
+}
+.padrao-texto-genero {
+  display: block;
+  margin: 0 10px 0 0px;
+  padding: 10px 0;
+  width: 50%;
+  color: white;
+}
+.tipo-cel-tel {
+  margin-left: 150px;
+  margin-right: 250px;
+  margin-top: 100px;
+  color: white;
 }
