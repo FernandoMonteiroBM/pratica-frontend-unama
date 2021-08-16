@@ -13,8 +13,11 @@ function FormularioCadastro({ aoEnviar }) {
   const [nascimento, setNascimento] = useState("");
   const [tipo, setTipo] = useState("");
   const [telefone, setTelefone] = useState("");
+  
   return (
-    <div>
+    
+    <div className="organizar">
+      
       <form
         onSubmit={(event) => {
           event.preventDefault();
@@ -88,12 +91,14 @@ function FormularioCadastro({ aoEnviar }) {
         </div>
 
         <div className="genero-nascimento">
-          <div className="formulario-botao">
-            <label className="padrao-texto-genero">Genero</label>
+          <div className="formulario-genero">
+            <h3>Genero</h3>
             <RadioButton
               text="Masculino"
               value="Masculino"
-              onChange={(e) => setGenero("Masculino")}
+              onChange={(event) => {
+                setGenero(event.target.value);
+              }}
               id="Genero"
             />
             <RadioButton
@@ -134,6 +139,7 @@ function FormularioCadastro({ aoEnviar }) {
                 setTipo(event.target.value);
               }}
             >
+              
               <option value="celular">Celular</option>
               <option value="fixo">Fixo</option>
             </select>
@@ -148,7 +154,7 @@ function FormularioCadastro({ aoEnviar }) {
               }}
               value={telefone}
               type="text"
-              mask={tipo==="celular" ? "(99)99999-9999" : "(99)9999-9999"}
+              mask={tipo === "celular" ? "(99)99999-9999" : "(99)9999-9999"}
               placeholder="(__)_____-____"
             />
           </div>
@@ -161,16 +167,14 @@ function FormularioCadastro({ aoEnviar }) {
         </div>
       </form>
       <div className="resultados">
-        <p>Email: </p>
-        <span>{email}</span>
-        <p>Nome: </p>
-        <span>{nome + " " + sobrenome}</span>
-        <p>{tipo} :</p>
-        <span>{telefone}</span>
-        <p>Data de Nascimento :</p>
-        <span>{nascimento}</span>
-        <p>Genero :</p>
-        <span>{genero}</span>
+        <p>Email: {email}</p>
+        <p>Nome: {nome + " " + sobrenome}</p>
+        <p>Seu tipo de telefone: {tipo} :</p>
+        <p>Seu Número: {telefone}</p>
+        <p>CPF: {cpf}</p>      
+        <p>Data de Nascimento: {nascimento}</p>    
+        <p>Genero: {genero}</p>
+
       </div>
     </div>
   );

@@ -1,14 +1,31 @@
+input {
+  display: block;
+
+  font-size: 18px;
+  color: rgb(94, 0, 182);
+  font-weight: bolder;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  margin: 5px 0;
+  padding: 2px 15px;
+  position: relative;
+}
+
 .formulario {
   margin-left: 150px;
   margin-right: 250px;
-  margin-top: 100px;
+  margin-top: 50px;
   color: white;
 }
 .formulario-nascimento {
-  margin-left: 150px;
+  margin-top: 32px;
   margin-right: 250px;
-
   color: white;
+}
+.formulario-genero {
+  color: white;
+  padding-left: 50px;
+  padding-top: 10px;
 }
 .input-padrao {
   display: block;
@@ -47,16 +64,9 @@
 .input-padrao:hover {
   transform: scale(1.1);
 }
-.formulario-botao {
-  margin-left: 150px;
-  margin-right: 250px;
-  margin-top: 10px;
-  color: white;
-  padding-left: 50px;
-  padding-top: 10px;
-}
+
 .padrao-texto-genero {
-  display: block;
+  display: inline;
   margin: 0 10px 0 0px;
   padding: 10px 0;
   width: 50%;
@@ -65,16 +75,32 @@
 .tipo-cel-tel {
   margin-left: 150px;
   margin-right: 250px;
-  margin-top: 100px;
+  margin-top: 150px;
   color: white;
 }
-.resultados{
-  margin-left: 750px;
-  margin-right: 150px;
-  margin-bottom: 750px;
+.resultados {
+  height: 285px;
   padding: 10px 10px 10px 10px;
   align-content: center;
   color: rgb(94, 0, 182);
   background-color: white;
+  width: 400px;
+  max-height: 390px;
   border-radius: 20px;
+  margin-top: 150px;
+}
+.resultados-campos {
+  display: inline;
+}
+.genero-nascimento {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-content: space-between;
+  height: 100px;
+  width: 984px;
+  
+}
+.organizar{
+  display: flex;
 }

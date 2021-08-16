@@ -3,11 +3,13 @@ import React from 'react';
 
 function RadioButton({text, ...others}) {
     return (
-        <p>
+        <p className="radio">
+            {text}
             <input
                 type="radio"
                 {...others}
-            />{text}
+            />
+            
         </p>
     );
 }
