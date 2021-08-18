@@ -12,7 +12,7 @@ function FormularioCadastro({ aoEnviar }) {
   const [cpf, setCpf] = useState("");
   const [genero, setGenero] = useState("");
   const [nascimento, setNascimento] = useState("");
-  const [tipo, setTipo] = useState("Celular");
+  const [tipo, setTipo] = useState("celular");
   const [telefone, setTelefone] = useState("");
   const [errors, setErrors] = useState({});
 
@@ -112,6 +112,7 @@ function FormularioCadastro({ aoEnviar }) {
           <div className="tipo">
             <h3>Telefone</h3>
             <select
+              className="opcoes"
               name="tipo"
               id="tipo"
               value={tipo}
@@ -134,7 +135,7 @@ function FormularioCadastro({ aoEnviar }) {
               }}
               value={telefone}
               type="text"
-              mask={tipo === "celular" ? "(99)99999-9999" : "(99)9999-9999"}
+              mask={(tipo === "celular") ? "(99)99999-9999" : "(99)9999-9999"}
               placeholder="(__)_____-____"
             />
           </div>
@@ -145,6 +146,7 @@ function FormularioCadastro({ aoEnviar }) {
             <h3>Genero</h3>
             <RadioButton
               text="Masculino"
+              
               value="Masculino"
               onChange={(event) => {
                 setGenero(event.target.value);
@@ -187,7 +189,7 @@ function FormularioCadastro({ aoEnviar }) {
         </div>
       </form>
       <div className="resultados">
-        <p>Email: {email === emailC}</p>
+        <p>Email: {(email && emailC) ? email : ""}</p>
         <p>Nome: {nome + " " + sobrenome}</p>
         <p>Telefone {tipo} </p>
         <p>Seu Número: {telefone}</p>

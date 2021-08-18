@@ -11,7 +11,7 @@
   position: relative;
   transition: 1s all;
 }
-input:hover{
+input:hover {
   transform: scale(1.1);
 }
 
@@ -37,7 +37,6 @@ input:hover{
   padding: 10px 0;
   width: 50%;
   color: white;
-  
 }
 .submit-padrao-botao {
   display: block;
@@ -52,9 +51,15 @@ input:hover{
   background-color: rgb(94, 0, 182);
   border: none;
 }
+
 .submit-padrao-botao:hover {
   background: rgb(140, 0, 255);
-  transform: scale(1.3);
+  transform: scale(1.2);
+}
+.submit-padrao-botao:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  background-color: rgb(41, 1, 78);
 }
 .padrao-texto-genero {
   display: inline;
@@ -75,6 +80,11 @@ input:hover{
   height: 100px;
   width: 780px;
 }
+.opcoes {
+  border-radius: 20px;
+  border: none;
+  
+}
 .resultados {
   height: 285px;
   padding: 10px 10px 10px 10px;
@@ -87,7 +97,7 @@ input:hover{
   margin-top: 115px;
   transition: 1s all;
 }
-.resultados:hover{
+.resultados:hover {
   transform: scale(1.1);
 }
 .resultados-campos {
@@ -100,15 +110,14 @@ input:hover{
   align-content: space-between;
   height: 100px;
   width: 984px;
-  
 }
-.organizar{
+.organizar {
   display: flex;
 }
-.campo-telefone{
+.campo-telefone {
   margin-top: 35px;
 }
-.erro{
+.erro {
   font-weight: bolder;
   color: rgb(255, 82, 82);
 }
