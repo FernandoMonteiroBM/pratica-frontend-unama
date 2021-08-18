@@ -1,12 +1,13 @@
 import React from 'react';
 import InputMask from "react-input-mask";
 
-function CampoInput({textLabel,...others}){
+function CampoInput({textLabel,error,...others}){
     return(
         <div>
+            {error && <p className="erro">{error}</p>}
             <label htmlFor={others.id}>{textLabel}</label>
             <InputMask id={others.id}
-            {...others}/>
+            {...others} className="input-padrao"/>
         </div>
     )
 }
