@@ -7,9 +7,9 @@ function RadioButton({text, ...others}) {
             {text}
             <input
                 type="radio"
+                
                 {...others}
-            />
-            
+            />           
         </p>
     );
 }

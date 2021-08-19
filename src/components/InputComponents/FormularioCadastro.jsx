@@ -120,8 +120,8 @@ function FormularioCadastro({ aoEnviar }) {
                 setTipo(event.target.value);
               }}
             >
-              <option value="Celular">Celular</option>
-              <option value="Fixo">Fixo</option>
+              <option value="celular">Celular</option>
+              <option value="fixo">Fixo</option>
             </select>
           </div>
           <div className="campo-telefone">
@@ -135,7 +135,7 @@ function FormularioCadastro({ aoEnviar }) {
               }}
               value={telefone}
               type="text"
-              mask={(tipo === "celular") ? "(99)99999-9999" : "(99)9999-9999"}
+              mask={tipo === "celular" ? "(99)99999-9999" : "(99)9999-9999"}
               placeholder="(__)_____-____"
             />
           </div>
@@ -144,26 +144,33 @@ function FormularioCadastro({ aoEnviar }) {
         <div className="genero-nascimento">
           <div className="formulario-genero">
             <h3>Genero</h3>
+
             <RadioButton
               text="Masculino"
-              
               value="Masculino"
               onChange={(event) => {
                 setGenero(event.target.value);
               }}
               id="Genero"
+              name="Genero"
             />
             <RadioButton
               text="Feminino"
               value="Feminino"
-              onChange={(e) => setGenero("Feminino")}
+              onChange={(event) => {
+                setGenero(event.target.value);
+              }}
               id="Genero"
+              name="Genero"
             />
             <RadioButton
               text="Outro"
               value="Outro"
-              onChange={(e) => setGenero("Outro")}
+              onChange={(event) => {
+                setGenero(event.target.value);
+              }}
               id="Genero"
+              name="Genero"
             />
           </div>
           <div className="formulario-nascimento">
@@ -189,9 +196,9 @@ function FormularioCadastro({ aoEnviar }) {
         </div>
       </form>
       <div className="resultados">
-        <p>Email: {(email && emailC) ? email : ""}</p>
+        <p>Email: {email && emailC ? email : ""}</p>
         <p>Nome: {nome + " " + sobrenome}</p>
-        <p>Telefone {tipo} </p>
+        <p>Telefone- {tipo} </p>
         <p>Seu Número: {telefone}</p>
         <p>CPF: {cpf}</p>
         <p>Data de Nascimento: {nascimento}</p>
